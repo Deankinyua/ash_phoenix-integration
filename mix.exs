@@ -34,6 +34,9 @@ defmodule MyAshPhoenixApp.MixProject do
     [
       {:phoenix, "~> 1.7.12"},
       {:phoenix_ecto, "~> 4.4"},
+      {:ash, "~> 3.0"},
+      {:ash_postgres, "~> 2.0"},
+      {:ash_phoenix, "~> 2.0"},
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 4.0"},
