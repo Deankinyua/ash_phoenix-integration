@@ -18,6 +18,7 @@ defmodule MyAshPhoenixAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/posts", PostsLive
   end
 
   # Other scopes may use custom stacks.

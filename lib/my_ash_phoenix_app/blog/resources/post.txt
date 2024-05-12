@@ -1,0 +1,16 @@
+this specifies how to interact with the database in iex
+
+# create post
+new_post = MyAshPhoenixApp.Blog.create_posts!(%{title: "hello world"})
+
+# read post
+MyAshPhoenixApp.Blog.list_posts!()
+
+# get post by id
+MyAshPhoenixApp.Blog.get_post!(new_post.id)
+
+# update post
+updated_post = MyAshPhoenixApp.Blog.update_post!(new_post, %{content: "hello to you too!"})
+
+# delete post
+MyAshPhoenixApp.Blog.destroy_post!(updated_post)
