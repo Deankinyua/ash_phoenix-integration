@@ -32,18 +32,18 @@
     }
   ],
   "table": "posts",
-  "hash": "A8EB7C372076F6894F0C82A1EAA1E33667A682F3F8D74C1F2DA0E01DF57CB973",
+  "hash": "2196211FACD07931D5D831399113D2B341DD6F6FA6D5D752D1B5568FE9556AF3",
   "repo": "Elixir.MyAshPhoenixApp.Repo",
-  "schema": null,
-  "check_constraints": [],
-  "custom_indexes": [],
-  "custom_statements": [],
   "identities": [],
+  "schema": null,
   "multitenancy": {
     "global": null,
     "attribute": null,
     "strategy": null
   },
   "base_filter": null,
+  "check_constraints": [],
+  "custom_indexes": [],
+  "custom_statements": [],
   "has_create_action": true
 }

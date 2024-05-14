@@ -1,4 +1,4 @@
-defmodule MyAshPhoenixApp.Repo.Migrations.InitialMigration do
+defmodule MyAshPhoenixApp.Repo.Migrations.MigrateResources1 do
   @moduledoc """
   Updates resources based on their most recent snapshots.
 
@@ -8,6 +8,12 @@ defmodule MyAshPhoenixApp.Repo.Migrations.InitialMigration do
   use Ecto.Migration
 
   def up do
+    create table(:products, primary_key: false) do
+      add :id, :uuid, null: false, default: fragment("gen_random_uuid()"), primary_key: true
+      add :name, :text, null: false
+      add :price, :decimal, null: false
+    end
+
     create table(:posts, primary_key: false) do
       add :id, :uuid, null: false, default: fragment("gen_random_uuid()"), primary_key: true
       add :title, :text, null: false
@@ -17,5 +23,7 @@ defmodule MyAshPhoenixApp.Repo.Migrations.InitialMigration do
 
   def down do
     drop table(:posts)
+
+    drop table(:products)
   end
 end

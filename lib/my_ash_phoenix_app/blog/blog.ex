@@ -10,5 +10,14 @@ defmodule MyAshPhoenixApp.Blog do
       define :destroy_post, action: :destroy
       define :get_post, args: [:id], action: :by_id
     end
+
+    resource MyAshPhoenixApp.Blog.Product do
+      # Define an interface for calling resource actions.
+      define :create_product, action: :create
+      define :list_products, action: :read
+      define :update_products, action: :update
+      define :destroy_product, action: :destroy
+      define :get_product, args: [:id], action: :by_id
+    end
   end
 end

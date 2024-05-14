@@ -19,6 +19,7 @@ defmodule MyAshPhoenixAppWeb.Router do
 
     get "/", PageController, :home
     live "/posts", PostsLive
+    live "/products", ProductsLive
   end
 
   # Other scopes may use custom stacks.
