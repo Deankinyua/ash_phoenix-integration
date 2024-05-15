@@ -30,7 +30,13 @@ defmodule MyAshPhoenixApp.Blog.Product do
   end
 
   actions do
-    defaults [:read, :destroy]
+    defaults [:destroy]
+
+    read :read do
+      # prepare build(filter: [price: 100])
+      prepare build(sort: [:price])
+      # prepare {MyAshPhoenixApp.Preparations.Top5, attribute: :price}
+    end
 
     create :create do
       accept [:name, :price]

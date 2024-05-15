@@ -10,7 +10,8 @@ defmodule MyAshPhoenixApp.Application do
     children = [
       MyAshPhoenixAppWeb.Telemetry,
       MyAshPhoenixApp.Repo,
-      {DNSCluster, query: Application.get_env(:my_ash_phoenix_app, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:my_ash_phoenix_app, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: MyAshPhoenixApp.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: MyAshPhoenixApp.Finch},

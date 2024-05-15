@@ -41,6 +41,7 @@ defmodule MyAshPhoenixAppWeb.PostsLive do
 
     {:ok, socket}
   end
+
   def handle_event("create_post", %{"form" => %{"title" => title}}, socket) do
     Blog.create_posts(%{title: title})
     posts = Blog.list_posts!()
@@ -54,7 +55,6 @@ defmodule MyAshPhoenixAppWeb.PostsLive do
 
     {:noreply, assign(socket, posts: posts, post_selector: post_selector(posts))}
   end
-
 
   def handle_event("update_post", %{"form" => form_params}, socket) do
     %{"post_id" => post_id, "content" => content} = form_params
