@@ -16,6 +16,7 @@ defmodule MyAshPhoenixAppWeb.ProductsLive do
       </div>
     </div>
     <h2>Create Product</h2>
+    <.my_component />
     <.form :let={f} for={@create_form} phx-submit="create_product">
       <.input type="text" field={f[:name]} placeholder="input the product name" />
       <.input type="number" field={f[:price]} placeholder="input product price" />

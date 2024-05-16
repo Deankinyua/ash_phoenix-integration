@@ -19,6 +19,19 @@ defmodule MyAshPhoenixAppWeb.CoreComponents do
   alias Phoenix.LiveView.JS
   import MyAshPhoenixAppWeb.Gettext
 
+  def my_component(assigns) do
+    assigns =
+      assign_new(assigns, :bg_color, fn ->
+        Enum.random(~w(bg-red-200 bg-green-200 bg-blue-200))
+      end)
+
+    ~H"""
+    <div class={@bg_color}>
+      Example
+    </div>
+    """
+  end
+
   @doc """
   Renders a modal.
 
